@@ -1,9 +1,13 @@
 // declarar função
 function adicionar() {
 
+    // seleciona a tag select e busca o valor contido nela
+    let produtoSelect = document.getElementById('produto');
+    let produto = produtoSelect.value;
+    
     // seleciona a tag input cujo id é quantidade
     let campoQuantidade = document.getElementById('quantidade');
-    
+        
     // pega o valor presente no imput
     let quantidade = campoQuantidade.value;
 
@@ -12,10 +16,6 @@ function adicionar() {
         alert('Por favor, insira a quantidade antes de adicionar o produto.');
         return;
     }
-    
-    // novamente seleciona a tag select e busca o valor contido nela
-    let produtoSelect = document.getElementById('produto');
-    let produto = produtoSelect.value;
 
     // divide a string contida na variável em um array de substrings. A divisão ocorre sempre que a sequência de caracteres ' - R$' é encontrada. Isso resulta num array armazenado na nova variável. Ex: ['Fone de ouvido', '100']
     let stringNomeProduto = produto.split(' - R$');
