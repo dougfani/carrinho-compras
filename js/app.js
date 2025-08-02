@@ -5,6 +5,12 @@ function adicionar() {
     // recuperar valores nome do produto, quantidade e valor
     let produto = document.getElementById('produto').value;   
     let quantidade = document.getElementById('quantidade').value;
+
+    if (!produto || produto.trim() === '') {
+        alert('Selecione um produto válido!');
+        return;
+    }
+
     if(quantidade == '' || quantidade == 0) {
         alert('Por favor, insira a quantidade antes de adicionar o produto.');
         return;
